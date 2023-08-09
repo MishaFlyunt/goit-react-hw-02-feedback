@@ -23,7 +23,9 @@ export const Statistics = ({
         <StatisticsSpan>Total: {total}</StatisticsSpan>
       </li>
       <li>
-        <StatisticsSpan>Positive Feedback: {positivePercentage}%</StatisticsSpan>
+        <StatisticsSpan>
+          Positive Feedback: {positivePercentage}%
+        </StatisticsSpan>
       </li>
     </StatisticsList>
   ) : (

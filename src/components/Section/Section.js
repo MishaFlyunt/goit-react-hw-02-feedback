@@ -1,4 +1,4 @@
-import {SectionTitleStat} from './Section.styled'
+import { SectionTitleStat } from './Section.styled';
 
 export const Section = ({ title, titleStat, children }) => {
   return (
