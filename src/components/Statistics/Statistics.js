@@ -1,30 +1,31 @@
 import { Notification } from '../Notification/Notification';
+import { StatisticsList, StatisticsSpan } from './Statistics.styled';
 
 export const Statistics = ({
   good,
   neutral,
   bad,
-  total = 0,
-  positivePercentage = 0,
+  total,
+  positivePercentage,
 }) => {
   return total ? (
-    <ul>
+    <StatisticsList>
       <li>
-        <span>Good: {good}</span>
+        <StatisticsSpan>Good: {good}</StatisticsSpan>
       </li>
       <li>
-        <span>Neutral: {neutral}</span>
+        <StatisticsSpan>Neutral: {neutral}</StatisticsSpan>
       </li>
       <li>
-        <span>Bad: {bad}</span>
+        <StatisticsSpan>Bad: {bad}</StatisticsSpan>
       </li>
       <li>
-        <span>Total: {total}</span>
+        <StatisticsSpan>Total: {total}</StatisticsSpan>
       </li>
       <li>
-        <span>Positive Feedback: {positivePercentage}%</span>
+        <StatisticsSpan>Positive Feedback: {positivePercentage}%</StatisticsSpan>
       </li>
-    </ul>
+    </StatisticsList>
   ) : (
     <Notification mes="There is no feedback" />
   );

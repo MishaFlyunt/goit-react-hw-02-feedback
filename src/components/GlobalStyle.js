@@ -51,6 +51,7 @@ img {
 
 export const Container = styled.div`
   width: 1100px;
+  height: 100vh;
   margin: 0 auto;
   padding: 0 20px;
 
@@ -58,4 +59,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background-color: rgb(112, 244, 421);
 `;

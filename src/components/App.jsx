@@ -34,7 +34,7 @@ export class App extends Component {
             onLeaveFeedback={this.handleLeaveFeedback}
           />
         </Section>
-        <Section title="Statistics">
+        <Section titleStat="Statistics">
           <Statistics
             good={good}
             neutral={neutral}
