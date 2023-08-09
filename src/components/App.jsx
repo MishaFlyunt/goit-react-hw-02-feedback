@@ -1,5 +1,5 @@
 import { GlobalStyle, Container } from './GlobalStyle';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { FeedbackOptions } from './FeedbackOptions/FeedbacskOptions';
 import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
@@ -22,9 +22,10 @@ export class App extends Component {
   totalFeedback = ({ good, neutral, bad }) => good + neutral + bad;
 
   positivePercentage = ({ good }) =>
-    Math.round(good * 100) / this.totalFeedback(this.state);
+    Math.round((good * 100) / this.totalFeedback(this.state));
 
   render() {
+    const { good, neutral, bad } = this.state;
     return (
       <Container>
         <Section title="Plase leave feedback">
@@ -35,11 +36,11 @@ export class App extends Component {
         </Section>
         <Section title="Statistics">
           <Statistics
-            good={this.good}
-            neutral={this.neutral}
-            bad={this.bad}
-            total={this.totalFeedback}
-            positivePercentage={this.positivePercentage}
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={this.totalFeedback(this.state)}
+            positivePercentage={this.positivePercentage(this.state)}
           />
         </Section>
 
