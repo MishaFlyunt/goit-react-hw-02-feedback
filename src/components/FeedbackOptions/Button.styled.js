@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getRandomColors } from '../RandomColor';
 
 export const ButtonList = styled.ul`
   display: flex;
@@ -13,9 +14,11 @@ export const Button = styled.button`
   border: 2px solid green;
   border-radius: 15px;
   cursor: pointer;
+  background-color: ${props => getRandomColors(props.index)};
+  color: white;
 
   &:hover {
-    background-color: green;
+    background-color: ${props => getRandomColors(props.index)};
     color: white;
   }
 `;

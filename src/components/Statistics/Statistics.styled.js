@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-
-const getRandomColor = () =>
-  `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+import {getRandomColor} from '../RandomColor'
 
 export const StatisticsList = styled.ul`
   display: flex;
